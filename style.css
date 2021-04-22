@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+/*Main type*/
+ header{
+	text-align: center;
+}
+h2{
+	text-align: center;
+	color: orange;
+	margin: 60px;
+	border:0.1em orange dotted;
+	border-radius: 0px 20px 0px 20px
+}
+body
+{
+    background-color: black;
+    color: #6CE843;
+	font-family: 'DotGothic16', sans-serif;
+}
+p{
+	font-size: 1.1em;
+}
+ul{
+	list-style-type:f109 ;
+}
+b{
+	font-size: 1.3em;
+	color: orange;
+}
+a{
+	color: orange;
+}
+h1{
+	color: orange;
+	font-size: 4em;
+	border:0.1em orange dotted;
+	border-radius: 0px 20px 0px 20px
+}
+button{
+	background-color:#6CE843 ;
+	color:orange;
+	margin-left:center;
+	height: 40px;
+	width:120px;
+	border-radius:40px;
+	font-size:1.5em;
+	text-align:center;
+}
+/*Animation*/
+@keyframes title{
+	0%{transform:rotate(0deg)}
+	25%{transform:rotate(90deg)}
+	50%{transform:rotate(180deg)}
+	75%{transform:rotate(270deg)}
+	100%{transform:rotate(360deg)}
+}
+/*Class*/
+.mc1,.mc2,.mc3,.mc4,.mc5,.mc6{
+	transition: transform 1s;
+}
+.block:hover .mc1{
+	transform: translate(-3em);
+}
+.block:hover .mc2{
+	transform: translate(-2em);
+}
+.block:hover .mc3{
+	transform: translate(-1em);
+}
+.block:hover .mc4{
+	transform: translate(1em);
+}
+.block:hover .mc5{
+	transform: translate(2em);
+}
+.block:hover .mc6{
+	transform: translate(3em);
+}
+.block:hover .fa-laptop{
+	animation-name: title;
+  	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+/*Id*/
+#experiences{
+	overflow:hidden;
+}
+#score{
+	color: orange;
+}
+#button{
+	text-align:center;
+}
+#en-tête{
+	text-align: center;
+}
