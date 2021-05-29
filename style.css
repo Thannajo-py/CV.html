@@ -8,7 +8,7 @@ h2{
 	color: orange;
 	margin: 60px;
 	border:0.1em orange dotted;
-	border-radius: 0px 20px 0px 20px
+	border-radius: 0px 20px 0px 20px;
 }
 body
 {
@@ -19,7 +19,7 @@ body
 p{
 	font-size: 1.1em;
 }
-ul{
+ul:not(ul:last-of-type){
 	list-style-type:f109 ;
 }
 b{
@@ -33,17 +33,23 @@ h1{
 	color: orange;
 	font-size: 4em;
 	border:0.1em orange dotted;
-	border-radius: 0px 20px 0px 20px
+	border-radius: 0px 20px 0px 20px;
 }
 button{
 	background-color:#6CE843 ;
 	color:orange;
-	margin-left:center;
 	height: 40px;
 	width:120px;
 	border-radius:40px;
 	font-size:1.5em;
-	text-align:center;
+}
+main > div:last-of-type{
+	text-align: center;
+}
+
+ul:last-of-type {
+	list-style-type: none;
+	padding-left: 0;
 }
 /*Animation*/
 @keyframes title{
@@ -54,6 +60,7 @@ button{
 	100%{transform:rotate(360deg)}
 }
 /*Class*/
+
 .mc1,.mc2,.mc3,.mc4,.mc5,.mc6{
 	transition: transform 1s;
 }
@@ -77,9 +84,13 @@ button{
 }
 .block:hover .fa-laptop{
 	animation-name: title;
-  	animation-duration: 4s;
+	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+}
+
+.answer{
+	border-radius:20px;
 }
 /*Id*/
 #experiences{
@@ -88,9 +99,52 @@ button{
 #score{
 	color: orange;
 }
-#button{
-	text-align:center;
-}
 #en-tête{
 	text-align: center;
+}
+@media print {
+	#print{
+		display:none;
+	}
+	p, li, .exp {
+		font-size: 0.1in;
+	}
+	b {
+		font-size: 0.12in;
+	}
+	h2 {
+		margin: 0.2in;
+		font-size: 0.2in;
+	}
+	h1 {
+		margin: 0.25in;
+		font-size: 0.25in;
+	}
+	.fa-microchip {
+		display: none;
+	}
+	body, a, b, h1, h2 {
+		color:black;
+	}
+	h1, h2 {
+		border:0.1em black dotted;
+		border-radius: 0px 20px 0px 20px;
+	}
+
+
+}
+@media screen and (max-device-width:800px){
+	#print{
+		font-size:45px;
+		height: 80px;
+		width:200px;
+	}
+	h2{
+		font-size: 15px;
+		border: 5px orange dotted;
+	}
+	.fa-microchip {
+		display:none;
+	}
+
 }
